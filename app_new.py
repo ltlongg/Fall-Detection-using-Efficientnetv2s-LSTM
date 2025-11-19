@@ -376,7 +376,7 @@ def main():
     
     # Load models
     model_path = "best_model_efficientnet_lstm_v2.pth"
-    num_frames = 16
+    num_frames = 32
     threshold = 0.5
     conf_thres = 0.5
     
