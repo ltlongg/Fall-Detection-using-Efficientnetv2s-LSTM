@@ -270,7 +270,7 @@ def load_yolo_model():
 def get_transform():
     """Get image transformation pipeline"""
     return A.Compose([
-        A.Resize(height=224, width=224),
+        A.Resize(height=288, width=288),
         A.Normalize(mean=[0.485, 0.456, 0.406], std=[0.229, 0.224, 0.225]),
         A.ToTensorV2(),
     ])
@@ -375,7 +375,7 @@ def main():
     """, unsafe_allow_html=True)
     
     # Load models
-    model_path = "best_model_efficientnet_lstm_224_16.pth"
+    model_path = "best_model_efficientnet_lstm_v2.pth"
     num_frames = 16
     threshold = 0.5
     conf_thres = 0.5
