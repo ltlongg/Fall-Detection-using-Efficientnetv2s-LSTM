@@ -26,7 +26,7 @@ Dự án này là một hệ thống phát hiện hành động té ngã (Fall D
 
 Hệ thống sử dụng mô hình **EfficientNetLSTM**:
 
-* **Backbone (CNN):** `EfficientNetV2-S` (Pre-trained trên ImageNet) dùng để trích xuất đặc trưng (features) từ từng khung hình (frame). Các lớp của EfficientNet có thể được đóng băng (freeze) hoặc fine-tune tùy vào giai đoạn huấn luyện.
+* **Backbone (CNN):** `EfficientNetV2-S` (Pre-trained trên ImageNet) dùng để trích xuất đặc trưng (features) từ từng khung hình (frame). Các lớp của EfficientNet sẽ được đóng băng (freeze) khi huấn luyện huấn luyện.
 * **Temporal Processing (RNN):** `Bidirectional LSTM` (2 lớp, hidden size 256) tiếp nhận chuỗi đặc trưng từ CNN để học mối quan hệ thời gian giữa các frame liên tiếp.
 * **Classifier:** Các lớp Fully Connected (Linear) kết hợp Dropout để đưa ra xác suất té ngã (Binary Classification).
 * **Input:** Chuỗi 32 frames, kích thước ảnh resize về 288x288.
